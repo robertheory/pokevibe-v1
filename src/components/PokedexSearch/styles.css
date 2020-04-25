@@ -1,0 +1,89 @@
+.header {
+    background-color: crimson;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* font-size: 0.9rem; */
+    color: white;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.item {
+    /* background-color: blue; */
+    font-size: 1rem;
+    height: 30px;
+}
+
+.item select {
+    width: 150px;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.select select {
+    font-family: 'Arial';
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 1px 10px;
+    outline: 0;
+    border: 0px solid #000000;
+    border-radius: 100px;
+    background: #b4b4b4;
+    color: #000000;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+    display: none;
+}
+
+.select select:hover, .select select:focus {
+    color: #ffffff;
+    background: #575757;
+}
+
+.select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.select_arrow {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #000000 transparent transparent transparent;
+}
+
+.select select:hover~.select_arrow, .select select:focus~.select_arrow {
+    border-top-color: #bcbcbc;
+}
+
+.select select:disabled~.select_arrow {
+    border-top-color: #cccccc;
+}
