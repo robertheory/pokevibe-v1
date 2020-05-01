@@ -1,0 +1,15 @@
+@font-face {
+
+    font-family: RetroGame;
+    src: url('./assets/fonts/retroGame.ttf');
+
+}
+
+html, body {
+    
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    font-family: RetroGame, monospace;
+
+}
