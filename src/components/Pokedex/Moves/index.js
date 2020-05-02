@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Moves(props) {
 
+    console.log(props)
+
     return (
 
         <div className="moves marble">
@@ -10,7 +12,7 @@ export default function Moves(props) {
 
             <div className="moves-items">
 
-                {props.moves.map(move => (
+                {/* {moves.map(move => (
 
                     <div className="move-item" key={move.name}>
                         <div className="move-name">{move.name}</div>
@@ -38,7 +40,7 @@ export default function Moves(props) {
                     </div>
                     
 
-                ))}
+                ))} */}
 
 
             </div>

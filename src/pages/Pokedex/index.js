@@ -15,28 +15,15 @@ class Pokedex extends React.Component {
 
     state = {
 
-        name: 'Bulbasaur',
-        no:'1',
+        name: '',
+        no:'',
         img:[
             'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
         ],
-        description:'For some time after its birth, it grows by gaining nourishment from the seed on its back.',
+        description:'',
         stats: [],
-        types: ['Poison', 'Grass'],
-        moves: [
-
-            {
-
-                'name': 'Razor-Wind',
-                'accuracy': 100,
-                'power': 10,
-                'pp': 10,
-                'type': 'Normal',
-                'learn': 'LVL0'
-
-            }
-
-        ]
+        types: [],
+        moves: []
 
     }
 
@@ -52,24 +39,44 @@ class Pokedex extends React.Component {
         this.setState({ no: pokeData.data.id})
 
         const description = await API.get(`pokemon-species/${pokeData.data.id}/`, (response) => {
-
-            return response
-            
+            return response            
         })
         
-        this.setState({ description: description.data.flavor_text_entries[1].flavor_text })
+        this.setState({ description: description.data.flavor_text_entries.map(text => (
+            text.language.name === 'en' ? text.flavor_text : ''
+            ))[1] 
+        })
 
         this.setState({ stats: [...pokeData.data.stats] })
-        // console.log(this.state.stats)
 
-        // this.setState({})
-        // this.setState({})
+        this.setState({ types: pokeData.data.types.map(item => {
+                return item.type.name
+            })
+        })
+
+        const movePath = pokeData.data.moves.map(item => {
+
+            return item.move.url.split('https://pokeapi.co/api/v2/')[1]
+            
+        })
+
+        this.setState({ moves: movePath})
+
+        // console.log(movesData)
+
         // this.setState({})
 
         // this.setState({ name:newName.data.name })
     }
 
+    componentDidMount(){
+
+        this.setPokemon(1)
+
+    }
+
     render() {
+
 
         return(
 
