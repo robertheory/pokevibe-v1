@@ -17,7 +17,7 @@ class Header extends React.Component {
 
             <div className="header">
 
-                <div className="title">PokéVibe</div>
+                <div className="title shadow-pop-tr">PokéVibe</div>
 
                 <FiMenu className="menu-button" onClick={() => menuToggle()}></FiMenu>
 

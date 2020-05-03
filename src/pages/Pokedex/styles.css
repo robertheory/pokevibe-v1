@@ -88,13 +88,31 @@
     justify-content: space-around;
     width: 250px;
     align-items: center;
-    font-size: 2em;
+    flex-wrap: wrap;
     
+}
+
+.gallery .sub{
+    
+    font-size: 1.3em;
+    
+}
+
+.img-container {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 250px;
+    align-items: center;
+    font-size: 2rem;
+    flex-wrap: nowrap;
+
 }
 
 .pokemon-img {
 
-    width: 50vw;
+    width: 100vw;
 
 }
 
@@ -285,6 +303,18 @@ h5 {
         width: 300;
 
     }
+    
+    .img-container {
+    
+        font-size: 10rem;
+    
+    }
+
+    .pokemon-img {
+
+        width: 100vw;
+
+    }
 
     .description {
 
@@ -295,6 +325,7 @@ h5 {
     .types {
 
         width: 200px;
+        align-items: center;
 
     }
 

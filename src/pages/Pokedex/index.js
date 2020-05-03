@@ -1,6 +1,8 @@
 import React from 'react'
 import './styles.css'
 import API from '../../services/pokeapi'
+import axios from 'axios'
+import { pickRandom } from '../../components/utils'
 
 
 import SearchForm from '../../components/Pokedex/SearchForm'
@@ -11,15 +13,14 @@ import Stats from '../../components/Pokedex/Stats'
 import Types from '../../components/Pokedex/Types'
 import Moves from '../../components/Pokedex/Moves'
 
+
 class Pokedex extends React.Component {
 
     state = {
 
         name: '',
         no:'',
-        img:[
-            'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
-        ],
+        img:[],
         description:'',
         stats: [],
         types: [],
@@ -42,10 +43,8 @@ class Pokedex extends React.Component {
             return response            
         })
         
-        this.setState({ description: description.data.flavor_text_entries.map(text => (
-            text.language.name === 'en' ? text.flavor_text : ''
-            ))[1] 
-        })
+        this.setState({ description: pickRandom(description.data.flavor_text_entries.filter(e => e.language.name === "en").map(e => e.flavor_text)
+        )})
 
         this.setState({ stats: [...pokeData.data.stats] })
 
@@ -56,17 +55,16 @@ class Pokedex extends React.Component {
 
         const movePath = pokeData.data.moves.map(item => {
 
-            return item.move.url.split('https://pokeapi.co/api/v2/')[1]
+            return item.move.url
             
         })
 
-        this.setState({ moves: movePath})
+        // this.setState({ moves: movePath})
 
-        // console.log(movesData)
+        // console.log(this.state.moves)
 
-        // this.setState({})
+        this.setState({ img: pokeData.data.sprites})
 
-        // this.setState({ name:newName.data.name })
     }
 
     componentDidMount(){

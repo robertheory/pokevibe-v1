@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function Moves(props) {
 
-    console.log(props)
-
     return (
 
         <div className="moves marble">

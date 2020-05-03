@@ -24,3 +24,23 @@ export function titleLeizeArray([text]){
     return finalText
 
 }
+
+export function pickRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+export function normalizeNameDisplay(name) {
+
+    const splitted = name.split('_')
+
+    const upperCase = splitted.map(part => {
+
+        return titleLeize(part)
+
+    })
+
+    const result = upperCase.toString().replace(',',' ').replace(',',' ')
+
+    return result
+
+}
