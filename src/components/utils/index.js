@@ -62,6 +62,14 @@ export function normalizeNameDisplayItems(name) {
 }
 
 export function itemSearchfy(text){
+    
+    // [...text[0]][0] === "0" ? text.slice(1) : ''
+
+    if ([...text[0]][0] === "0") {
+
+        return text.slice(1)
+
+    }
 
     return text.replace(' ','-').replace(' ','-')
 

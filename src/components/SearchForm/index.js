@@ -7,7 +7,7 @@ export default function SearchForm(props) {
 
         <div className="search-form">
 
-            <input type="text" className="search-bar" id="search-bar" placeholder="Type here..."/>
+            <input type="text" className="search-bar" id="search-bar" placeholder="ID or name..."/>
 
             <button 
                 className="search-button"
