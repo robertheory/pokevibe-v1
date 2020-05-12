@@ -13,8 +13,6 @@ export default function ItemDisplay(props) {
 
     }, [props])
 
-    // console.log(item.category !== undefined ? item.category : '')
-
     return (
 
         <div>

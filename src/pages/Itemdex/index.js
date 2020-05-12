@@ -3,7 +3,8 @@ import './styles.css'
 import API from '../../services/pokeapi'
 
 import SearchForm from '../../components/SearchForm'
-import ItemDisplay from '../../components/Itemdex/ItemDisplay'
+// import ItemDisplay from '../../components/Itemdex/ItemDisplay'
+import ItemList from '../../components/Itemdex/ItemList'
 
 class Itemdex extends React.Component {
 
@@ -24,6 +25,7 @@ class Itemdex extends React.Component {
     
     
     this.setState({ item: itemData.data })
+    // console.log(this.state.item)
     // console.log(itemData.data)
     
   }
@@ -46,7 +48,8 @@ class Itemdex extends React.Component {
 
         <SearchForm handleSearch={this.setItem}></SearchForm>
 
-        <ItemDisplay item={this.state.item}></ItemDisplay>
+        {/* <ItemDisplay item={this.state.item}></ItemDisplay> */}
+        <ItemList item={this.state.item}></ItemList>
 
       </div>
 
