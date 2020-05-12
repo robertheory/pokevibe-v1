@@ -30,12 +30,12 @@ class Header extends React.Component {
                     </div>
 
                     <div className="item">
-                        <a href="/pokedex">Pokédex Main</a>
+                        <a href="/pokedex">Pokédex</a>
                     </div>
 
-                    <div className="item">
+                    {/* <div className="item">
                         <a href="/pokedexside">Pokédex Side</a>
-                    </div>
+                    </div> */}
 
                     <div className="item">
                         <a href="/itemdex">Itemdex</a>

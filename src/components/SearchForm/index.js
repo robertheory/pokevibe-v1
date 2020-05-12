@@ -1,4 +1,5 @@
 import React from 'react'
+import { itemSearchfy } from '../utils'
 
 export default function SearchForm(props) {
 
@@ -10,7 +11,7 @@ export default function SearchForm(props) {
 
             <button 
                 className="search-button"
-                onClick={() => props.handleSearch(document.getElementById('search-bar').value.toLowerCase())}>
+                onClick={() => props.handleSearch(itemSearchfy(document.getElementById('search-bar').value.toLowerCase()))}>
                 Search
             </button>
 

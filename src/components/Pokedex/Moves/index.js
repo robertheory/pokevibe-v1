@@ -1,6 +1,42 @@
 import React from 'react'
+// import API from '../../../services/pokeapi'
+// import axios from 'axios'
 
 export default function Moves(props) {
+
+    // const [move, setMove] = useState('')
+
+    // useEffect(() => {
+
+    //     const movePath = props.moves.map(item => {
+
+    //         return item.move.url
+
+    //     })
+
+
+    //     setMove(movePath)
+
+    //     console.log(movePath[0])
+
+        // const link = move[0]
+
+        // console.log(link)
+
+        // function showMove(move) {
+
+        // const moveInfo = API.get('move/13/', (response) => {
+
+        //     return response
+
+        // })
+
+        // console.log(moveInfo)
+
+        // }
+    // }, [props])
+
+
 
     return (
 

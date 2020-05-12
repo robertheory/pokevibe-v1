@@ -1,17 +1,16 @@
 import React from 'react'
 import './styles.css'
 import API from '../../services/pokeapi'
-import axios from 'axios'
 import { pickRandom } from '../../components/utils'
 
 
-import SearchForm from '../../components/Pokedex/SearchForm'
+import SearchForm from '../../components/SearchForm'
 import Name from '../../components/Pokedex/Name'
 import Gallery from '../../components/Pokedex/Gallery'
 import Description from '../../components/Pokedex/Description'
 import Stats from '../../components/Pokedex/Stats'
 import Types from '../../components/Pokedex/Types'
-import Moves from '../../components/Pokedex/Moves'
+// import Moves from '../../components/Pokedex/Moves'
 
 
 class Pokedex extends React.Component {
@@ -24,7 +23,7 @@ class Pokedex extends React.Component {
         description:'',
         stats: [],
         types: [],
-        moves: []
+        // moves: []
 
     }
 
@@ -53,13 +52,13 @@ class Pokedex extends React.Component {
             })
         })
 
-        const movePath = pokeData.data.moves.map(item => {
+        // const movePath = pokeData.data.moves.map(item => {
 
-            return item.move.url
+        //     return item.move.url
             
-        })
+        // })
 
-        // this.setState({ moves: movePath})
+        this.setState({ moves: pokeData.data.moves })
 
         // console.log(this.state.moves)
 
@@ -92,7 +91,7 @@ class Pokedex extends React.Component {
 
                 <Types types={this.state.types}></Types>
 
-                <Moves moves={this.state.moves}></Moves>
+                {/* <Moves moves={this.state.moves}></Moves> */}
 
             </div>
 

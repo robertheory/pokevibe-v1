@@ -44,3 +44,25 @@ export function normalizeNameDisplay(name) {
     return result
 
 }
+
+export function normalizeNameDisplayItems(name) {
+
+    const splitted = name.split('-')
+
+    const upperCase = splitted.map(part => {
+
+        return titleLeize(part)
+
+    })
+
+    const result = upperCase.toString().replace(',',' ').replace(',',' ')
+
+    return result
+
+}
+
+export function itemSearchfy(text){
+
+    return text.replace(' ','-').replace(' ','-')
+
+}

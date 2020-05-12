@@ -7,9 +7,11 @@ class Home extends React.Component {
     
     return (
 
-      <div className="Home">
+      <div className="home">
 
         <h1>HOME</h1>
+
+        <p><a href="https://pokeapi.co/">Made with PokéAPI</a></p>
 
       </div>
 
