@@ -3,12 +3,14 @@ import React from 'react';
 import API from '../../../services/pokeapi'
 import { normalizeNameDisplayItems } from '../../utils'
 
+import ItemsByCategory from '../ItemsByCategory'
+
 class ItemList extends React.Component {
 
     state = {
 
-        items: '',
-        category: ''
+        category: '',
+        selectedCategory: 'https://pokeapi.co/api/v2/item-category/1/'
 
     }
 
@@ -22,15 +24,27 @@ class ItemList extends React.Component {
         })
         
         this.setState({ category: itemData.data.results })
-        console.log(this.state.category)
+        // console.log(this.state.category)
 
         // console.log(itemData.data)
+
+    }
+
+    setSelectedCategory = (url) => {
+
+        this.setState({ selectedCategory:url })
 
     }
 
     componentDidMount() {
 
         this.setData()
+
+    }
+
+    setItem = (url) => {
+
+        this.props.handleItemSelect(url)
 
     }
 
@@ -42,9 +56,11 @@ class ItemList extends React.Component {
 
             <div className="item-list">
 
-                <h4>Search By Category: </h4>
+                <div className="title">Search By Category:</div>
 
-                <select name="category" id="category" onChange={() => alert(document.getElementById('category').value)}>
+                <select name="category" id="category" onChange={() => this.setSelectedCategory(document.getElementById('category').value)} required>
+
+                    <option hidden>Category</option>
 
                     {this.state.category === '' ? '' : this.state.category.map(item => (
 
@@ -53,6 +69,8 @@ class ItemList extends React.Component {
                     ))}
 
                 </select>
+
+                <ItemsByCategory url={this.state.selectedCategory} handleItemSelect={this.setItem}></ItemsByCategory>
 
             </div>
 

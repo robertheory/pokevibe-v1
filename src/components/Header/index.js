@@ -33,10 +33,6 @@ class Header extends React.Component {
                         <a href="/pokedex">Pokédex</a>
                     </div>
 
-                    {/* <div className="item">
-                        <a href="/pokedexside">Pokédex Side</a>
-                    </div> */}
-
                     <div className="item">
                         <a href="/itemdex">Itemdex</a>
                     </div>

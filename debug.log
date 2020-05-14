@@ -1,0 +1,2 @@
+[0513/020038.259:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0513/023233.597:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: O comprimento do registro de informações especificado não coincide com o comprimento necessário à classe de informações especificada. (0xc0000004)

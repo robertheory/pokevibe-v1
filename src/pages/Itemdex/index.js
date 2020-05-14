@@ -1,39 +1,27 @@
 import React from 'react';
 import './styles.css'
-import API from '../../services/pokeapi'
 
-import SearchForm from '../../components/SearchForm'
-// import ItemDisplay from '../../components/Itemdex/ItemDisplay'
 import ItemList from '../../components/Itemdex/ItemList'
+import ItemDisplay from '../../components/Itemdex/ItemDisplay'
 
 class Itemdex extends React.Component {
 
   state = {
 
-    item: '1'
+    item: 'https://pokeapi.co/api/v2/item/1/'
 
   }
 
-  setItem = async (id) => {
+  setItem = (url) => {
     
-    const itemData = await API.get(`item/${id}`, (response) => {
-      
-      // console.log(response)
-      return response
-      
-    })
-    
-    
-    this.setState({ item: itemData.data })
-    // console.log(this.state.item)
-    // console.log(itemData.data)
+    this.setState({ item: url})
     
   }
 
   componentDidMount() {
 
     this.setItem(this.state.item)
-
+    
   }
   
   // 'item?offset=0&limit=954'
@@ -46,10 +34,11 @@ class Itemdex extends React.Component {
       <div className="Home">
 
 
-        <SearchForm handleSearch={this.setItem}></SearchForm>
+        <ItemList handleItemSelect={this.setItem}></ItemList>
+        <ItemDisplay item={this.state.item}></ItemDisplay>
 
-        {/* <ItemDisplay item={this.state.item}></ItemDisplay> */}
-        <ItemList item={this.state.item}></ItemList>
+        {/* <SearchForm handleSearch={this.setItem}></SearchForm> */}
+        {/* <ItemList item={this.state.item}></ItemList> */}
 
       </div>
 

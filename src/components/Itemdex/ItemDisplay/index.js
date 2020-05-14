@@ -2,15 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { normalizeNameDisplayItems } from '../../utils'
 import './styles.css'
 import snorlax from '../../../assets/img/sad-snorlax.png'
+import axios from 'axios'
 
 export default function ItemDisplay(props) {
 
     const [item, setItem] = useState('')
-
+    
     useEffect(() => {
 
-        setItem(props.item)
-
+        axios.get(props.item)
+            .then(function (response) {
+                // console.log(response.data)
+                // console.log(response.data)
+                setItem(response.data)
+            }
+        )
+            
     }, [props])
 
     return (
@@ -66,9 +73,6 @@ export default function ItemDisplay(props) {
                     <img src={snorlax} alt='Item not found' />
 
                 </div>}
-
-
-
 
 
         </div>
