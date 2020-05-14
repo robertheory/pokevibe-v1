@@ -1,5 +1,4 @@
 import React from 'react';
-// import './styles.css'
 import API from '../../../services/pokeapi'
 import { normalizeNameDisplayItems } from '../../utils'
 

@@ -2,16 +2,50 @@
 
     display: flex;
     width: 100%;
-    height: 90vh;
-    justify-content: space-evenly;
-    flex-direction: column;
+    height: 85vh;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
     text-align: center;
 
 }
 
-.home a {
+.home h4, .home p {
+
+    height: fit-content;
+
+}
+.home .links{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home .links .link {
+
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home .links .link a{
 
     color: black;
+    margin: 10px;
 
+}
+
+@media screen and (min-width: 768px) {
+    .home{
+
+        align-content: stretch;
+
+    }
 }

@@ -24,8 +24,6 @@ class Itemdex extends React.Component {
     
   }
   
-  // 'item?offset=0&limit=954'
-  
   render() {
     
     
@@ -36,9 +34,6 @@ class Itemdex extends React.Component {
 
         <ItemList handleItemSelect={this.setItem}></ItemList>
         <ItemDisplay item={this.state.item}></ItemDisplay>
-
-        {/* <SearchForm handleSearch={this.setItem}></SearchForm> */}
-        {/* <ItemList item={this.state.item}></ItemList> */}
 
       </div>
 

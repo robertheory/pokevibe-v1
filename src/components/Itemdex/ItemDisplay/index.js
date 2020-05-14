@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { normalizeNameDisplayItems } from '../../utils'
-import './styles.css'
 import snorlax from '../../../assets/img/sad-snorlax.png'
 import axios from 'axios'
 
@@ -35,7 +34,7 @@ export default function ItemDisplay(props) {
 
                     </div>
 
-                    {item.sprites.default === null ? 'No image' : <img src={item.sprites.default} alt={item.name} className="item-img" />}
+                    {item.sprites.default === null ? 'No image' : <img src={item.sprites.default} alt={item.name} className="item-img marble" />}
 
                     <div className="cost marble">Cost: {item.cost}</div>
 
@@ -52,7 +51,7 @@ export default function ItemDisplay(props) {
                         }
 
 
-                    <div className="description marble">
+                    <div className="item-description marble">
 
                         {item.effect_entries.map(item => (
 
