@@ -1,0 +1,36 @@
+.footer {
+
+    background-color: crimson;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.footer.links{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer.links .link {
+
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer .links .link a{
+
+    color: black;
+    margin: 10px;
+
+}

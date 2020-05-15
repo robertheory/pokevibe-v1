@@ -71,6 +71,17 @@
 
 }
 
+.marble-solid {
+
+    background: rgb(129,129,129);
+    background: linear-gradient(144deg, rgba(129,129,129,1) 0%, rgba(255,255,255,1) 25%, rgba(129,129,129,1) 50%, rgba(255,255,255,1) 75%, rgba(129,129,129,1) 100%);
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+
+}
+
 .name {
     
     width: 95%;

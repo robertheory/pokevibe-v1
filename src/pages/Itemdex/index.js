@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css'
 
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import ItemList from '../../components/Itemdex/ItemList'
 import ItemDisplay from '../../components/Itemdex/ItemDisplay'
 
@@ -30,11 +31,12 @@ class Itemdex extends React.Component {
     
     return (
       
-      <div className="Home">
+      <div className="itemdex">
         
         <Header></Header>
         <ItemList handleItemSelect={this.setItem}></ItemList>
         <ItemDisplay item={this.state.item}></ItemDisplay>
+        <Footer></Footer>
 
       </div>
 

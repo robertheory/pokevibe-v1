@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css'
-import { FiGithub, FiLink2, FiLinkedin } from 'react-icons/fi'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 class Home extends React.Component {
 
@@ -21,32 +21,7 @@ class Home extends React.Component {
           improve my skill on ReactJS.
         </p>
 
-        <div className="links">
-
-          <div className="link marble">
-            <FiLink2></FiLink2>
-            <a href="https://pokeapi.co/" target="new">
-              Made with PokéAPI
-            </a>
-          </div>
-          
-          <div className="link marble">
-              <FiGithub></FiGithub>
-              <a href="https://github.com/doravantebeto" target="new">
-                Github
-              </a>
-          </div>
-          
-          <div className="link marble">
-              <FiLinkedin></FiLinkedin>
-              <a href="https://www.linkedin.com/in/roberto-araujo-da-costa-7a3342148/" target="new">
-                Linkedin
-              </a>
-          </div>
-
-
-        </div>
-
+        <Footer></Footer>
 
       </div>
 
