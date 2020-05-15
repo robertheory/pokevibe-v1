@@ -4,6 +4,7 @@ import API from '../../services/pokeapi'
 import { pickRandom } from '../../components/utils'
 
 
+import Header from '../../components/Header'
 import SearchForm from '../../components/SearchForm'
 import Name from '../../components/Pokedex/Name'
 import Gallery from '../../components/Pokedex/Gallery'
@@ -78,6 +79,8 @@ class Pokedex extends React.Component {
         return(
 
             <div className="pokedex">
+
+                <Header></Header>
 
                 <SearchForm handleSearch={this.setPokemon}></SearchForm>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css'
 import { FiGithub, FiLink2, FiLinkedin } from 'react-icons/fi'
+import Header from '../../components/Header'
 
 class Home extends React.Component {
 
@@ -9,6 +10,8 @@ class Home extends React.Component {
     return (
 
       <div className="home">
+
+        <Header></Header>
 
         <h4 className="marble">ReactJS Pokémon Guide</h4>
 

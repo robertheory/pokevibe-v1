@@ -12,7 +12,6 @@ class App extends React.Component {
 
       <div className="App">
 
-        <Header></Header>
         <Routes></Routes>
 
       </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles.css'
 import { FiMenu, FiX } from 'react-icons/fi'
 
@@ -26,15 +27,15 @@ class Header extends React.Component {
                     <FiX className="menu-button" onClick={() => menuToggle()}></FiX>
 
                     <div className="item">
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </div>
 
                     <div className="item">
-                        <a href="/pokedex">Pokédex</a>
+                        <Link to="/pokedex">Pokédex</Link>
                     </div>
 
                     <div className="item">
-                        <a href="/itemdex">Itemdex</a>
+                        <Link to="/itemdex">Itemdex</Link>
                     </div>
 
                 </nav>
