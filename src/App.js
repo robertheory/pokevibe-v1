@@ -14,8 +14,6 @@ class App extends React.Component {
 
         <Header></Header>
         <Routes></Routes>
-        {/* <Pokedex source={this.state.pokeInfo}></Pokedex> */}
-        {/* <Pokedex></Pokedex> */}
 
       </div>
 

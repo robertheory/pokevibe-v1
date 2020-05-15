@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css'
 import { FiGithub, FiLink2, FiLinkedin } from 'react-icons/fi'
-import logo from '../../assets/img/pokelogo.webp'
 
 class Home extends React.Component {
 
