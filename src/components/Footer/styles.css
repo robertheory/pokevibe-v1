@@ -9,22 +9,14 @@
 
 }
 
-.footer.links{
+.footer .links{
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-}
-
-.footer.links .link {
-
-    display: flex;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
 
 }
 

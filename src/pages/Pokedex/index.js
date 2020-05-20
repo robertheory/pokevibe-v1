@@ -5,7 +5,6 @@ import { pickRandom } from '../../components/utils'
 
 
 import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import SearchForm from '../../components/SearchForm'
 import Name from '../../components/Pokedex/Name'
 import Gallery from '../../components/Pokedex/Gallery'
@@ -96,8 +95,6 @@ class Pokedex extends React.Component {
                 <Types types={this.state.types}></Types>
 
                 {/* <Moves moves={this.state.moves}></Moves> */}
-
-                <Footer></Footer>
 
             </div>
 

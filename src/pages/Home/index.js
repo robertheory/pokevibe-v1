@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css'
 import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 
 class Home extends React.Component {
 
@@ -20,8 +19,6 @@ class Home extends React.Component {
           i'm looking forward to improve this project in order to not just offer way more info about this amazing universe but to 
           improve my skill on ReactJS.
         </p>
-
-        <Footer></Footer>
 
       </div>
 

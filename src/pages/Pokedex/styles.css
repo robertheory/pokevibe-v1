@@ -1,6 +1,5 @@
 .pokedex {
     display: flex;
-    top: 79px;
     flex-direction: column;
     width: 100vw;
     align-items: center;
