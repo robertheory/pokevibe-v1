@@ -1,7 +1,29 @@
-## PokéVibe
+# PokéVibe
 
-* Pokédex based application
+##### Aplicação desenvolvida em ReactJS com o objetivo de reproduzir uma Pokédex, um catálogo dos monstros dos universos de Pokémon, além de um Itemdex que tem o mesmo objetivo, porém, com os diversos itens encontrados principalmente dentro dos jogos da mesma série.
 
-* I've been working on this simple guide about the Pokémon universe starting with a Pokédex and an Itemdex, however, i'm looking forward to improve this project in order to not just offer way more info about this amazing universe but to improve my skill on ReactJS.
 
-<img src="/PokeVibe Mobile Print.PNG">
+
+Essa aplicação utiliza a [PokéAPI](https://pokeapi.co/) para obter todos seus dados sobre os Pokémons e items
+
+## Pokédex:
+![Podekex](https://raw.githubusercontent.com/doravantebeto/pokeVibe/master/Pokedex.gif)
+
+## Itemdex:
+![Podekex](https://raw.githubusercontent.com/doravantebeto/pokeVibe/master/itemdex.gif)
+
+### Requisitos:
+- [Node + npm](https://nodejs.org/en/download/)
+
+
+### Instalação:
+> npm i
+> npm start
+- Após esses comandos o servidor a aplicação será iniciada na porta 3000.
+
+
+### Build:
+> npm run build
+
+### Contribuições:
+Contribuições são sempre bem vindas, caso deseje colaborar, por favor, seja claro nas suas anotações e comentários.
