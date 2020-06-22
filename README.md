@@ -18,6 +18,7 @@ Essa aplicação utiliza a [PokéAPI](https://pokeapi.co/) para obter todos seus
 
 ### Instalação:
 > npm i
+
 > npm start
 - Após esses comandos o servidor a aplicação será iniciada na porta 3000.
 
